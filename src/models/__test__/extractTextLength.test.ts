@@ -7,7 +7,7 @@ it('should count length of a text with and without whitespaces', async () => {
 		withoutSpaces: 12
 	};
 
-	expect(new TextEvaluator(text1).extractTextLength(text1)).toEqual(expectedResult1);
+	expect(TextEvaluator.extractTextLength(text1)).toEqual(expectedResult1);
 
 	const text2 = ' Show Me    The  Money ';
 	const expectedResult2 = {
@@ -15,7 +15,7 @@ it('should count length of a text with and without whitespaces', async () => {
 		withoutSpaces: 14
 	};
 
-	expect(new TextEvaluator(text2).extractTextLength(text2)).toEqual(expectedResult2);
+	expect(TextEvaluator.extractTextLength(text2)).toEqual(expectedResult2);
 
 	const text3 = 'IamAnElephant';
 	const expectedResult3 = {
@@ -23,5 +23,5 @@ it('should count length of a text with and without whitespaces', async () => {
 		withoutSpaces: 13
 	};
 
-	expect(new TextEvaluator(text3).extractTextLength(text3)).toEqual(expectedResult3);
+	expect(TextEvaluator.extractTextLength(text3)).toEqual(expectedResult3);
 });

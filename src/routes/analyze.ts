@@ -5,9 +5,8 @@ const router = express.Router();
 
 router.post('/analyze', (req: Request, res: Response) => {
 	const { text } = req.body;
-	console.log(text, text.length);
 
-	res.send(new TextEvaluator(text).serializeResponse());
+	res.send(TextEvaluator.serializeResponse(text));
 });
 
 export { router as analyzerRouter };
