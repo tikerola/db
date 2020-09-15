@@ -1,6 +1,6 @@
 import { TextEvaluator } from '../TextEvaluator';
 
-it('should count length of a text with and without whitespaces', async () => {
+it('should count length of a text with and without whitespaces', () => {
 	const text1 = 'this is sparta';
 	const expectedResult1 = {
 		withSpaces: 14,
