@@ -24,4 +24,20 @@ it('should count length of a text with and without whitespaces', async () => {
 	};
 
 	expect(TextEvaluator.extractTextLength(text3)).toEqual(expectedResult3);
+
+	const text4 = ' ';
+	const expectedResult4 = {
+		withSpaces: 1,
+		withoutSpaces: 0
+	};
+
+	expect(TextEvaluator.extractTextLength(text4)).toEqual(expectedResult4);
+
+	const text5 = '';
+	const expectedResult5 = {
+		withSpaces: 0,
+		withoutSpaces: 0
+	};
+
+	expect(TextEvaluator.extractTextLength(text5)).toEqual(expectedResult5);
 });

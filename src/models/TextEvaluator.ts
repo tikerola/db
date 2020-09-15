@@ -28,9 +28,9 @@ export class TextEvaluator {
 	}
 
 	static extractWordCount(text: string): number {
-		const cleanedFromExtraWhitespaces = text.replace(/\s{2,}/g, ' ');
+		const cleanedFromExtraWhitespaces = text.replace(/\s{2,}/g, ' ').trim();
 
-		return cleanedFromExtraWhitespaces.trim().split(' ').length;
+		return cleanedFromExtraWhitespaces ? cleanedFromExtraWhitespaces.split(' ').length : 0;
 	}
 
 	static extractCharacterCount(text: string): CharacterCount {
